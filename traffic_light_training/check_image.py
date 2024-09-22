@@ -17,10 +17,15 @@ def draw_boxes(image_path, label_path, class_names):
         class_id, x_center, y_center, box_width, box_height = map(float, line.strip().split())
         
         # YOLO 형식을 픽셀 좌표로 변환
-        x1 = int((x_center - box_width / 2) * width)
-        y1 = int((y_center - box_height / 2) * height)
-        x2 = int((x_center + box_width / 2) * width)
-        y2 = int((y_center + box_height / 2) * height)
+        x_center *= width
+        y_center *= height
+        box_width *= width
+        box_height *= height
+
+        x1 = int(x_center - box_width / 2)
+        y1 = int(y_center - box_height / 2)
+        x2 = int(x_center + box_width / 2)
+        y2 = int(y_center + box_height / 2)
 
         # 바운딩 박스 그리기
         cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
@@ -36,8 +41,7 @@ def main(dataset_type):
     images_path = os.path.join(base_path, 'images')
     labels_path = os.path.join(base_path, 'labels')
 
-    class_names = ['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning','ped_go','ped_noSign','ped_stop','bus_go','bus_noSign,','bus_stop','bus_warning']
-
+    class_names =['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning']
     # 이미지 파일 목록 가져오기
     image_files = [f for f in os.listdir(images_path) if f.endswith('.jpg')]
 

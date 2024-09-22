@@ -36,7 +36,7 @@ def main(dataset_type):
     images_path = os.path.join(base_path, 'images')
     labels_path = os.path.join(base_path, 'labels')
 
-    class_names = ['RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'Vehicle_Bus', 'Vehicle_Car']
+    class_names = ['RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'Vehicle_Bus', 'Vehicle_Car','Unprotected_LeftTurn']
 
     # 이미지 파일 목록 가져오기
     image_files = [f for f in os.listdir(images_path) if f.endswith('.jpg')]

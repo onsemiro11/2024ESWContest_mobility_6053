@@ -2,33 +2,6 @@ import os
 from tqdm import tqdm
 import argparse
 
-def rename_files(images_path, labels_path, dataset_type):
-    # 이미지와 라벨 파일 목록 가져오기
-    image_files = sorted([f for f in os.listdir(images_path) if f.endswith('.jpg')])
-    label_files = sorted([f for f in os.listdir(labels_path) if f.endswith('.txt')])
-
-    # 파일 개수 확인 (이미지 파일과 라벨 파일 수가 일치해야 함)
-    assert len(image_files) == len(label_files), "이미지 파일과 라벨 파일의 개수가 일치하지 않습니다."
-
-    # 파일 이름 변경
-    for idx, (img_file, lbl_file) in enumerate(tqdm(zip(image_files, label_files), total=len(image_files), desc="Renaming files")):
-        prefix = 'v_' if dataset_type == 'valid' else ''
-        new_name = f"{prefix}{idx}"  # 'valid'일 경우 'v_' 접두사 추가
-
-        # 기존 경로
-        img_src_path = os.path.join(images_path, img_file)
-        lbl_src_path = os.path.join(labels_path, lbl_file)
-
-        # 새로운 경로
-        img_dst_path = os.path.join(images_path, f"{new_name}.jpg")
-        lbl_dst_path = os.path.join(labels_path, f"{new_name}.txt")
-
-        # 파일 이름 변경
-        os.rename(img_src_path, img_dst_path)
-        os.rename(lbl_src_path, lbl_dst_path)
-
-        print(f"Renamed: {img_file} -> {new_name}.jpg, {lbl_file} -> {new_name}.txt")
-
 def process_label_file(file_path, ori_class, rmv_class, new_class):
     with open(file_path, 'r') as f:
         labels = f.readlines()
@@ -52,10 +25,8 @@ def main(dataset_type):
     labels_path = os.path.join(base_path, dataset_type, 'labels')
 
     ori_class = ['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning','ped_go','ped_noSign','ped_stop','bus_go','bus_noSign,','bus_stop','bus_warning']
-    rmv_class = []
-    new_class = ['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning','ped_go','ped_noSign','ped_stop','bus_go','bus_noSign,','bus_stop','bus_warning']
-
-    rename_files(images_path, labels_path, dataset_type)
+    rmv_class = ['ped_go','ped_noSign','ped_stop','bus_go','bus_noSign,','bus_stop','bus_warning']
+    new_class = ['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning']
 
     print("\n **** class remove **** \n")
 
@@ -68,6 +39,13 @@ def main(dataset_type):
         processed, kept = process_label_file(file_path, ori_class, rmv_class, new_class)
         total_processed += processed
         total_kept += kept
+
+        # Remove image and label file if filtered_labels is empty
+        if kept == 0:
+            img_file = file_path.replace('.txt', '.jpg').replace('labels','images')  # Assuming image files are .jpg
+            os.remove(file_path)
+            os.remove(img_file)
+            print(f"Removed empty label and image: {file_path}, {img_file}")
 
     print(f"\nTotal: Processed {total_processed} labels, kept {total_kept}")
 

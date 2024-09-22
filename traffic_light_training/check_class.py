@@ -13,7 +13,7 @@ def get_class_distribution(labels_path):
                     class_counts[class_id] += 1
     return class_counts
 
-class_data = ['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning','ped_go','ped_noSign','ped_stop','bus_go','bus_noSign,','bus_stop','bus_warning']
+class_data =['veh_go','veh_goLeft','veh_noSign','veh_stop','veh_stopLeft','veh_stopWarning','veh_warning']
 
 if __name__ == "__main__":
     if len(sys.argv) != 2 or sys.argv[1] not in ['train', 'valid']:
