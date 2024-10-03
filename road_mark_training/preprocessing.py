@@ -46,17 +46,7 @@ def process_label_file(file_path, ori_class, rmv_class, new_class):
 
     return len(labels), len(filtered_labels)
 
-def main(dataset_type):
-    base_path = '/home/hyundo/road_mark'
-    images_path = os.path.join(base_path, dataset_type, 'images')
-    labels_path = os.path.join(base_path, dataset_type, 'labels')
-
-    ori_class = ['Pedestrian_Bicycle', 'Pedestrian_Pedestrian', 'RoadMarkArrow_Else', 'RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'RoadMarkArrow_Uturn', 'RoadMark_Character', 'RoadMark_Crosswalk', 'RoadMark_Number', 'RoadMark_StopLine', 'TrafficLight_Arrow', 'TrafficLight_Green', 'TrafficLight_GreenArrow', 'TrafficLight_Red', 'TrafficLight_RedArrow', 'TrafficLight_Yellow', 'TrafficSign_Else', 'TrafficSign_Speed', 'Vehicle_Bus', 'Vehicle_Car', 'Vehicle_Motorcycle', 'Vehicle_Unknown']
-    rmv_class = ['Pedestrian_Pedestrian','Pedestrian_Bicycle', 'RoadMarkArrow_Else', 'RoadMark_Character', 'RoadMark_Number',  'Vehicle_Motorcycle', 'Vehicle_Unknown','TrafficSign_Else', 'TrafficSign_Speed','TrafficLight_Yellow','TrafficLight_RedArrow','TrafficLight_Red','TrafficLight_GreenArrow','TrafficLight_Green','TrafficLight_Arrow','RoadMarkArrow_Uturn','RoadMark_StopLine','RoadMark_Crosswalk']
-    new_class = ['RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'Vehicle_Bus', 'Vehicle_Car']
-
-    rename_files(images_path, labels_path, dataset_type)
-
+def class_remove(labels_path, ori_class, rmv_class, new_class):
     print("\n **** class remove **** \n")
 
     total_processed = 0
@@ -70,6 +60,40 @@ def main(dataset_type):
         total_kept += kept
 
     print(f"\nTotal: Processed {total_processed} labels, kept {total_kept}")
+
+def image_delete(images_path,labels_path, new_class):
+    image_files = [f for f in os.listdir(images_path) if f.endswith('.jpg')]
+    for filename in tqdm(image_files, desc="Deleting images"):
+        file_path = os.path.join(images_path, filename)
+        label_file_path = os.path.join(labels_path, filename.replace('.jpg', '.txt'))
+
+        if os.path.exists(label_file_path):
+            with open(label_file_path, 'r') as f:
+                labels = f.readlines()
+
+            # Check if all labels are either Vehicle_Bus or Vehicle_Car
+            all_valid = all(int(line.split()[0]) in [new_class.index('Vehicle_Bus'), new_class.index('Vehicle_Car')] for line in labels)
+
+            if all_valid:
+                os.remove(file_path)
+                os.remove(label_file_path)
+                print(f"Deleted: {filename} and {label_file_path}")
+
+def main(dataset_type):
+    base_path = '/home/hyundo/road_mark'
+    images_path = os.path.join(base_path, dataset_type, 'images')
+    labels_path = os.path.join(base_path, dataset_type, 'labels')
+
+    ori_class = ['Pedestrian_Bicycle', 'Pedestrian_Pedestrian', 'RoadMarkArrow_Else', 'RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'RoadMarkArrow_Uturn', 'RoadMark_Character', 'RoadMark_Crosswalk', 'RoadMark_Number', 'RoadMark_StopLine', 'TrafficLight_Arrow', 'TrafficLight_Green', 'TrafficLight_GreenArrow', 'TrafficLight_Red', 'TrafficLight_RedArrow', 'TrafficLight_Yellow', 'TrafficSign_Else', 'TrafficSign_Speed', 'Vehicle_Bus', 'Vehicle_Car', 'Vehicle_Motorcycle', 'Vehicle_Unknown']
+    rmv_class = ['Pedestrian_Pedestrian','Pedestrian_Bicycle', 'RoadMarkArrow_Else', 'RoadMark_Character', 'RoadMark_Number',  'Vehicle_Motorcycle', 'Vehicle_Unknown','TrafficSign_Else', 'TrafficSign_Speed','TrafficLight_Yellow','TrafficLight_RedArrow','TrafficLight_Red','TrafficLight_GreenArrow','TrafficLight_Green','TrafficLight_Arrow','RoadMarkArrow_Uturn','RoadMark_StopLine','RoadMark_Crosswalk']
+    new_class = ['RoadMarkArrow_Left', 'RoadMarkArrow_Right', 'RoadMarkArrow_Straight', 'RoadMarkArrow_StraightLeft', 'RoadMarkArrow_StraightRight', 'Vehicle_Bus', 'Vehicle_Car']
+
+    # 파일 이름 변경
+    # rename_files(images_path, labels_path, dataset_type)
+    # 클래스 제거
+    # class_remove(labels_path, ori_class, rmv_class, new_class)
+    # image delete
+    image_delete(images_path,labels_path,new_class)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Preprocess dataset")
