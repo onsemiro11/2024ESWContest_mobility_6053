@@ -63,6 +63,8 @@ def class_remove(labels_path, ori_class, rmv_class, new_class):
 
 def image_delete(images_path,labels_path, new_class):
     image_files = [f for f in os.listdir(images_path) if f.endswith('.jpg')]
+    bus = new_class.index('vehicle_Bus')
+    car = new_class.index('Vehicle_Car')
     for filename in tqdm(image_files, desc="Deleting images"):
         file_path = os.path.join(images_path, filename)
         label_file_path = os.path.join(labels_path, filename.replace('.jpg', '.txt'))
@@ -72,7 +74,7 @@ def image_delete(images_path,labels_path, new_class):
                 labels = f.readlines()
 
             # Check if all labels are either Vehicle_Bus or Vehicle_Car
-            all_valid = all(int(line.split()[0]) in [new_class.index('Vehicle_Bus'), new_class.index('Vehicle_Car')] for line in labels)
+            all_valid = all(int(line.split()[0]) in [bus, car] for line in labels)
 
             if all_valid:
                 os.remove(file_path)
