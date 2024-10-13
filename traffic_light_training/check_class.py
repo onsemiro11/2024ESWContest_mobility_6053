@@ -21,7 +21,7 @@ if __name__ == "__main__":
         sys.exit(1)
 
     dataset_type = sys.argv[1]
-    labels_path = f'/home/hyundo/traffic_light/{dataset_type}/labels'
+    labels_path = f'/home/hyundo/ADAS_data/traffic_light/{dataset_type}/labels'
     
     class_distribution = get_class_distribution(labels_path)
     matched_distribution = {class_data[k]: v for k, v in class_distribution.items()}

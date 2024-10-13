@@ -16,8 +16,8 @@ if dataset_type not in ['train', 'valid']:
     sys.exit(1)
 
 # 이미지 및 라벨 경로 설정
-image_dir = f'{dataset_type}/images/'
-label_dir = f'{dataset_type}/labels/'
+image_dir = f'/home/hyundo/ADAS_data/lane_data/{dataset_type}/images/'
+label_dir = f'/home/hyundo/ADAS_data/lane_data/{dataset_type}/labels/'
 
 # 이미지 크기 설정 (필요에 따라 수정)
 img_width = 1280

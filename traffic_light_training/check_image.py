@@ -37,7 +37,7 @@ def draw_boxes(image_path, label_path, class_names):
     return image
 
 def main(dataset_type):
-    base_path = f'/home/hyundo/traffic_light/{dataset_type}'
+    base_path = f'/home/hyundo/ADAS_data/traffic_light/{dataset_type}'
     images_path = os.path.join(base_path, 'images')
     labels_path = os.path.join(base_path, 'labels')
 

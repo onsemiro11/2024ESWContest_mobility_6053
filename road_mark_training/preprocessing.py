@@ -82,7 +82,7 @@ def image_delete(images_path,labels_path, new_class):
                 print(f"Deleted: {filename} and {label_file_path}")
 
 def main(dataset_type):
-    base_path = '/home/hyundo/road_mark'
+    base_path = '/home/hyundo/ADAS_data/road_mark'
     images_path = os.path.join(base_path, dataset_type, 'images')
     labels_path = os.path.join(base_path, dataset_type, 'labels')
 

@@ -20,7 +20,7 @@ def process_label_file(file_path, ori_class, rmv_class, new_class):
     return len(labels), len(filtered_labels)
 
 def main(dataset_type):
-    base_path = '/home/hyundo/traffic_light'
+    base_path = '/home/hyundo/ADAS_data/traffic_light'
     images_path = os.path.join(base_path, dataset_type, 'images')
     labels_path = os.path.join(base_path, dataset_type, 'labels')
 

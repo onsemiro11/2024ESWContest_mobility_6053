@@ -47,4 +47,4 @@ def split_dataset(base_dir, train_ratio=0.8):
     print(f"After Number of label files: {len(os.listdir(label_dir))}")
 
 # 사용 예시
-split_dataset('/home/hyundo/traffic_light/')
+split_dataset('/home/hyundo/ADAS_data/traffic_light/')

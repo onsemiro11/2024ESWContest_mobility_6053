@@ -30,7 +30,7 @@ def get_rare_classes(labels_path):
 
 def main(dataset_type):
     # 폴더 경로 설정
-    base_path = f'/home/hyundo/road_mark/{dataset_type}'
+    base_path = f'/home/hyundo/ADAS_data/road_mark/{dataset_type}'
     images_path = os.path.join(base_path, 'images')
     labels_path = os.path.join(base_path, 'labels')
 

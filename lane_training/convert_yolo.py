@@ -18,30 +18,23 @@ if dataset_type not in ['train', 'valid']:
     sys.exit(1)
 
 # JSON 파일 경로 및 출력할 txt 파일 경로
-input_json = f'lane_{dataset_type}.json'
-output_dir = f'{dataset_type}/labels'
-image_dir = f'{dataset_type}/images/'
+input_json = f'/home/hyundo/ADAS_data/lane_data/lane_{dataset_type}.json'
+output_dir = f'/home/hyundo/ADAS_data/lane_data/{dataset_type}/labels'
+image_dir = f'/home/hyundo/ADAS_data/lane_data/{dataset_type}/images/'
 
 # 디렉토리가 없는 경우 생성
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-# YOLO 포맷으로 변환하는 함수
-def convert_to_yolo(vertices, img_width, img_height):
-    x_coords = [v[0] for v in vertices]
-    y_coords = [v[1] for v in vertices]
-    
-    x_min = min(x_coords) / img_width
-    x_max = max(x_coords) / img_width
-    y_min = min(y_coords) / img_height
-    y_max = max(y_coords) / img_height
-
-    center_x = (x_min + x_max) / 2
-    center_y = (y_min + y_max) / 2
-    width = x_max - x_min
-    height = y_max - y_min
-    
-    return center_x, center_y, width, height
+# Define the categories to filter
+allowed_categories = {
+    "double other",
+    "double white",
+    "double yellow",
+    "single other",
+    "single white",
+    "single yellow"
+}
 
 # JSON 파일 열기
 with open(input_json, 'r') as f:
@@ -64,13 +57,30 @@ for item in tqdm(data):
     
     with open(output_file, 'w') as out_f:
         for label in labels:
+            # Filter labels based on category
+            if label['category'] not in allowed_categories:
+                continue
+            
             if 'poly2d' in label:
                 for poly in label['poly2d']:
                     vertices = poly['vertices']
                     # Class index is set to 0 as an example
                     class_index = 0
+                    
+                    # Check if there are exactly two vertices
+                    if len(vertices) == 2:
+                        # Create four new points by adding and subtracting 0.05
+                        new_vertices = [
+                            (vertices[0][0] - 0.1, vertices[0][1] - 0.1),
+                            (vertices[0][0] + 0.1, vertices[0][1] + 0.1),
+                            (vertices[1][0] - 0.1, vertices[1][1] - 0.1),
+                            (vertices[1][0] + 0.1, vertices[1][1] + 0.1)
+                        ]
+                        # Replace the original vertices with the new ones
+                        vertices = new_vertices
+                    
                     # Convert vertices to the required format
-                    vertices_str = ' '.join(f"{x/img_width} {y/img_height}" for x, y in vertices)
+                    vertices_str = ' '.join(f"{max(0, min(1, x/img_width))} {max(0, min(1, y/img_height))}" for x, y in vertices)
                     # Write to file
                     out_f.write(f"{class_index} {vertices_str}\n")
 
