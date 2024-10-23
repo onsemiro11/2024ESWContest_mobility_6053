@@ -71,10 +71,10 @@ for item in tqdm(data):
                     if len(vertices) == 2:
                         # Create four new points by adding and subtracting 0.05
                         new_vertices = [
-                            (vertices[0][0] - 0.1, vertices[0][1] - 0.1),
-                            (vertices[0][0] + 0.1, vertices[0][1] + 0.1),
-                            (vertices[1][0] - 0.1, vertices[1][1] - 0.1),
-                            (vertices[1][0] + 0.1, vertices[1][1] + 0.1)
+                            (vertices[0][0] - 3, vertices[0][1]),
+                            (vertices[0][0] + 3, vertices[0][1]),
+                            (vertices[1][0] + 3, vertices[1][1]),
+                            (vertices[1][0] - 3, vertices[1][1])
                         ]
                         # Replace the original vertices with the new ones
                         vertices = new_vertices

@@ -1,0 +1,15 @@
+
+{
+    "detection_threshold": 0.3,
+    "max_boxes":200,
+    "labels": [
+      "unlabeled",
+      "veh_go",
+      "veh_goLeft",
+      "veh_noSign",
+      "veh_stop",
+      "veh_stopLeft",
+      "veh_stopWarning",
+      "veh_warning"
+    ]
+}

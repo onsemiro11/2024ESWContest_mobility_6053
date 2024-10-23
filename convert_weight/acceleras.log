@@ -1,0 +1,81 @@
+2024-10-18 00:05:33,162 - WARNING - mo_config.py:164 - Reducing optimization level to 1 (the accuracy won't be optimized and compression won't be used) because there's less data than the recommended amount (1024)
+2024-10-18 00:05:33,163 - INFO - mo_script_parser.py:82 - Model received quantization params from the hn
+2024-10-18 00:05:37,136 - INFO - algorithm_base.py:143 - Starting Mixed Precision
+2024-10-18 00:05:37,556 - INFO - algorithm_base.py:159 - Mixed Precision is done (completion time is 00:00:00.42)
+2024-10-18 00:05:37,727 - INFO - algorithm_base.py:140 - LayerNorm Decomposition skipped
+2024-10-18 00:05:38,098 - INFO - algorithm_base.py:143 - Starting Statistics Collector
+2024-10-18 00:05:38,100 - INFO - stats_collection.py:76 - Using dataset with 64 entries for calibration
+2024-10-18 00:05:53,992 - INFO - algorithm_base.py:159 - Statistics Collector is done (completion time is 00:00:15.89)
+2024-10-18 00:05:54,550 - INFO - algorithm_base.py:143 - Starting Fix zp_comp Encoding
+2024-10-18 00:05:54,551 - INFO - algorithm_base.py:159 - Fix zp_comp Encoding is done (completion time is 00:00:00.00)
+2024-10-18 00:05:54,551 - INFO - algorithm_base.py:140 - Matmul Equalization skipped
+2024-10-18 00:06:09,652 - INFO - algorithm_base.py:140 - Finetune encoding skipped
+2024-10-18 00:06:09,655 - INFO - algorithm_base.py:143 - Starting Bias Correction
+2024-10-18 00:06:09,897 - INFO - block_by_block.py:325 - The algorithm Bias Correction will use up to 1.15 GB of storage space
+2024-10-18 00:06:09,897 - INFO - bias_correction_v2.py:66 - Using dataset with 64 entries for Bias Correction
+2024-10-18 00:07:45,188 - INFO - algorithm_base.py:159 - Bias Correction is done (completion time is 00:01:35.29)
+2024-10-18 00:07:45,196 - INFO - algorithm_base.py:140 - Adaround skipped
+2024-10-18 00:07:45,198 - INFO - algorithm_base.py:140 - Quantization-Aware Fine-Tuning skipped
+2024-10-18 00:07:58,202 - INFO - algorithm_base.py:143 - Starting Layer Noise Analysis
+2024-10-18 00:09:19,469 - INFO - algorithm_base.py:159 - Layer Noise Analysis is done (completion time is 00:01:21.27)
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:122 - Output layers signal-to-noise ratio (SNR): measures the quantization noise (higher is better)
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer3 SNR:	20.4 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer6 SNR:	18.42 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer9 SNR:	20.54 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer1 SNR:	17.13 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer2 SNR:	24.26 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer4 SNR:	17.12 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer5 SNR:	18.74 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer7 SNR:	20.2 dB
+2024-10-18 00:09:19,700 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer8 SNR:	23.47 dB
+2024-10-19 18:04:00,378 - WARNING - mo_config.py:164 - Reducing optimization level to 1 (the accuracy won't be optimized and compression won't be used) because there's less data than the recommended amount (1024)
+2024-10-19 18:04:00,380 - INFO - mo_script_parser.py:82 - Model received quantization params from the hn
+2024-10-19 18:04:04,469 - INFO - algorithm_base.py:143 - Starting Mixed Precision
+2024-10-19 18:04:04,880 - INFO - algorithm_base.py:159 - Mixed Precision is done (completion time is 00:00:00.41)
+2024-10-19 18:04:05,051 - INFO - algorithm_base.py:140 - LayerNorm Decomposition skipped
+2024-10-19 18:04:05,420 - INFO - algorithm_base.py:143 - Starting Statistics Collector
+2024-10-19 18:04:05,422 - INFO - stats_collection.py:76 - Using dataset with 64 entries for calibration
+2024-10-19 18:04:21,458 - INFO - algorithm_base.py:159 - Statistics Collector is done (completion time is 00:00:16.04)
+2024-10-19 18:04:22,028 - INFO - algorithm_base.py:143 - Starting Fix zp_comp Encoding
+2024-10-19 18:04:22,028 - INFO - algorithm_base.py:159 - Fix zp_comp Encoding is done (completion time is 00:00:00.00)
+2024-10-19 18:04:22,028 - INFO - algorithm_base.py:140 - Matmul Equalization skipped
+2024-10-19 18:04:37,186 - INFO - algorithm_base.py:140 - Finetune encoding skipped
+2024-10-19 18:04:37,189 - INFO - algorithm_base.py:143 - Starting Bias Correction
+2024-10-19 18:04:37,424 - INFO - block_by_block.py:325 - The algorithm Bias Correction will use up to 1.15 GB of storage space
+2024-10-19 18:04:37,424 - INFO - bias_correction_v2.py:66 - Using dataset with 64 entries for Bias Correction
+2024-10-19 18:06:14,260 - INFO - algorithm_base.py:159 - Bias Correction is done (completion time is 00:01:36.84)
+2024-10-19 18:06:14,268 - INFO - algorithm_base.py:140 - Adaround skipped
+2024-10-19 18:06:14,270 - INFO - algorithm_base.py:140 - Quantization-Aware Fine-Tuning skipped
+2024-10-19 18:06:27,710 - INFO - algorithm_base.py:143 - Starting Layer Noise Analysis
+2024-10-19 18:07:47,076 - WARNING - hailo_layer_noise_analysis.py:98 - Layer Noise Analysis Tool cut by the user, statistics params may not be generated.
+2024-10-19 18:13:03,326 - WARNING - mo_config.py:164 - Reducing optimization level to 1 (the accuracy won't be optimized and compression won't be used) because there's less data than the recommended amount (1024)
+2024-10-19 18:13:03,327 - INFO - mo_script_parser.py:82 - Model received quantization params from the hn
+2024-10-19 18:13:07,189 - INFO - algorithm_base.py:143 - Starting Mixed Precision
+2024-10-19 18:13:07,613 - INFO - algorithm_base.py:159 - Mixed Precision is done (completion time is 00:00:00.42)
+2024-10-19 18:13:07,789 - INFO - algorithm_base.py:140 - LayerNorm Decomposition skipped
+2024-10-19 18:13:08,168 - INFO - algorithm_base.py:143 - Starting Statistics Collector
+2024-10-19 18:13:08,171 - INFO - stats_collection.py:76 - Using dataset with 64 entries for calibration
+2024-10-19 18:13:24,785 - INFO - algorithm_base.py:159 - Statistics Collector is done (completion time is 00:00:16.61)
+2024-10-19 18:13:25,376 - INFO - algorithm_base.py:143 - Starting Fix zp_comp Encoding
+2024-10-19 18:13:25,376 - INFO - algorithm_base.py:159 - Fix zp_comp Encoding is done (completion time is 00:00:00.00)
+2024-10-19 18:13:25,376 - INFO - algorithm_base.py:140 - Matmul Equalization skipped
+2024-10-19 18:13:41,045 - INFO - algorithm_base.py:140 - Finetune encoding skipped
+2024-10-19 18:13:41,048 - INFO - algorithm_base.py:143 - Starting Bias Correction
+2024-10-19 18:13:41,282 - INFO - block_by_block.py:325 - The algorithm Bias Correction will use up to 1.15 GB of storage space
+2024-10-19 18:13:41,282 - INFO - bias_correction_v2.py:66 - Using dataset with 64 entries for Bias Correction
+2024-10-19 18:15:26,354 - INFO - algorithm_base.py:159 - Bias Correction is done (completion time is 00:01:45.07)
+2024-10-19 18:15:26,424 - INFO - algorithm_base.py:140 - Adaround skipped
+2024-10-19 18:15:26,427 - INFO - algorithm_base.py:140 - Quantization-Aware Fine-Tuning skipped
+2024-10-19 18:15:40,398 - INFO - algorithm_base.py:143 - Starting Layer Noise Analysis
+2024-10-19 18:17:07,235 - INFO - algorithm_base.py:159 - Layer Noise Analysis is done (completion time is 00:01:26.83)
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:122 - Output layers signal-to-noise ratio (SNR): measures the quantization noise (higher is better)
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer3 SNR:	18.71 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer7 SNR:	18.62 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer8 SNR:	20.3 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer1 SNR:	17.1 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer2 SNR:	21.38 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer5 SNR:	17.14 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer6 SNR:	15.91 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer9 SNR:	20.24 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer10 SNR:	20.67 dB
+2024-10-19 18:17:07,466 - INFO - quant_checker.py:127 - 	lane8_opset17/output_layer4 SNR:	15.9 dB

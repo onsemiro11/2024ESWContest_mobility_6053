@@ -1,0 +1,20 @@
+2024-10-16 00:31:25,258 - WARNING - mo_config.py:164 - Reducing optimization level to 1 (the accuracy won't be optimized and compression won't be used) because there's less data than the recommended amount (1024)
+2024-10-16 00:31:25,259 - INFO - mo_script_parser.py:82 - Model received quantization params from the hn
+2024-10-16 00:31:29,622 - INFO - algorithm_base.py:143 - Starting Mixed Precision
+2024-10-16 00:31:29,873 - INFO - algorithm_base.py:159 - Mixed Precision is done (completion time is 00:00:00.25)
+2024-10-16 00:31:30,073 - INFO - algorithm_base.py:140 - LayerNorm Decomposition skipped
+2024-10-16 00:31:30,502 - INFO - algorithm_base.py:143 - Starting Statistics Collector
+2024-10-16 00:31:30,504 - INFO - stats_collection.py:76 - Using dataset with 64 entries for calibration
+2024-10-16 00:31:46,143 - INFO - algorithm_base.py:159 - Statistics Collector is done (completion time is 00:00:15.64)
+2024-10-16 00:31:46,658 - INFO - algorithm_base.py:143 - Starting Fix zp_comp Encoding
+2024-10-16 00:31:46,659 - INFO - algorithm_base.py:159 - Fix zp_comp Encoding is done (completion time is 00:00:00.00)
+2024-10-16 00:31:46,659 - INFO - algorithm_base.py:140 - Matmul Equalization skipped
+2024-10-16 00:32:01,307 - INFO - algorithm_base.py:140 - Finetune encoding skipped
+2024-10-16 00:32:01,310 - INFO - algorithm_base.py:143 - Starting Bias Correction
+2024-10-16 00:32:01,525 - INFO - block_by_block.py:325 - The algorithm Bias Correction will use up to 1.99 GB of storage space
+2024-10-16 00:32:01,525 - INFO - bias_correction_v2.py:66 - Using dataset with 64 entries for Bias Correction
+2024-10-16 00:33:57,255 - INFO - algorithm_base.py:159 - Bias Correction is done (completion time is 00:01:55.73)
+2024-10-16 00:33:57,262 - INFO - algorithm_base.py:140 - Adaround skipped
+2024-10-16 00:33:57,264 - INFO - algorithm_base.py:140 - Quantization-Aware Fine-Tuning skipped
+2024-10-16 00:34:10,103 - INFO - algorithm_base.py:143 - Starting Layer Noise Analysis
+2024-10-16 00:35:24,013 - INFO - algorithm_base.py:159 - Layer Noise Analysis is done (completion time is 00:01:13.91)

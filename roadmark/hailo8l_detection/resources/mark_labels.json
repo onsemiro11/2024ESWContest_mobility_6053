@@ -1,0 +1,16 @@
+
+{
+    "detection_threshold": 0.3,
+    "max_boxes":200,
+    "labels": [
+      "unlabeled",
+      "RoadMarkArrow_Left",
+      "RoadMarkArrow_Right",
+      "RoadMarkArrow_Straight",
+      "RoadMarkArrow_StraightLeft",
+      "RoadMarkArrow_StraightRight",
+      "Vehicle_Bus",
+      "Vehicle_Car",
+      "Unprotected_LeftTurn"
+    ]
+}

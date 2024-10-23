@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>travi_ui</name>
+  <version>0.0.1</version>
+  <description>TRAVI UI Package</description>
+  <maintainer email="your-email@example.com">Your Name</maintainer>
+  <license>Apache 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>OpenCV</depend> <!-- OpenCV 패키지 의존성 수정 -->
+  
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

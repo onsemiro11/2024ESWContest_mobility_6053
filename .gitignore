@@ -4,4 +4,13 @@ lane_training/runs/
 astrayolo_ws/build/
 astrayolo_ws/install/
 astrayolo_ws/log/
-astrayolo_ws/Log/
+convert_weight/road_mark/training/
+convert_weight/lane_segmentation/training/
+convert_weight/traffic_light/training/
+output.avi
+travi_ui/media/vid/
+roadmark/hailo8l_detection/resources/ytvideo.mp4
+convert_weight/road_mark/calib_dataset.npy
+convert_weight/road_mark/mark8_opset17_quantized.har
+light/hailo8l_detection/resources/videoplayback.mp4
+convert_weight/lane_segmentation/calib_dataset.npy

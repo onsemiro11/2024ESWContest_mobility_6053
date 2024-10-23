@@ -1,0 +1,62 @@
+2024-10-15 01:15:19,631 - INFO - parser.py:158 - Translation started on ONNX model mark
+2024-10-15 01:15:19,762 - INFO - parser.py:193 - Restored ONNX model mark (completion time: 00:00:00.13)
+2024-10-15 01:15:20,214 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.58)
+2024-10-15 01:15:20,320 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model.cc:147 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&, const onnxruntime::ModelOptions&) Unsupported model IR version: 9, max supported IR version: 8
+
+2024-10-15 01:15:20,707 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-15 01:23:07,085 - INFO - parser.py:158 - Translation started on ONNX model mark8
+2024-10-15 01:23:07,217 - INFO - parser.py:193 - Restored ONNX model mark8 (completion time: 00:00:00.13)
+2024-10-15 01:23:07,696 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.61)
+2024-10-15 01:23:07,818 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model_load_utils.h:57 void onnxruntime::model_load_utils::ValidateOpsetForDomain(const std::unordered_map<std::__cxx11::basic_string<char>, int>&, const onnxruntime::logging::Logger&, bool, const string&, int) ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain ai.onnx is till opset 17.
+
+2024-10-15 01:23:08,207 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-15 01:27:01,139 - INFO - parser.py:158 - Translation started on ONNX model mark8
+2024-10-15 01:27:01,271 - INFO - parser.py:193 - Restored ONNX model mark8 (completion time: 00:00:00.13)
+2024-10-15 01:27:01,734 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.59)
+2024-10-15 01:27:01,842 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model_load_utils.h:57 void onnxruntime::model_load_utils::ValidateOpsetForDomain(const std::unordered_map<std::__cxx11::basic_string<char>, int>&, const onnxruntime::logging::Logger&, bool, const string&, int) ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain ai.onnx is till opset 17.
+
+2024-10-15 01:27:02,229 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-15 01:27:36,232 - INFO - parser.py:158 - Translation started on ONNX model mark9
+2024-10-15 01:27:54,059 - INFO - parser.py:158 - Translation started on ONNX model mark
+2024-10-15 01:27:54,193 - INFO - parser.py:193 - Restored ONNX model mark (completion time: 00:00:00.13)
+2024-10-15 01:27:54,646 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.59)
+2024-10-15 01:27:54,754 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model.cc:147 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&, const onnxruntime::ModelOptions&) Unsupported model IR version: 9, max supported IR version: 8
+
+2024-10-15 01:27:55,140 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-15 01:29:20,912 - INFO - parser.py:158 - Translation started on ONNX model mark8_opset17
+2024-10-15 01:29:21,043 - INFO - parser.py:193 - Restored ONNX model mark8_opset17 (completion time: 00:00:00.13)
+2024-10-15 01:29:21,605 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.69)
+2024-10-15 01:29:22,108 - INFO - onnx_translator.py:2482 - NMS structure of yolov8 (or equivalent architecture) was detected.
+2024-10-15 01:29:22,108 - INFO - onnx_translator.py:2484 - In order to use HailoRT post-processing capabilities, these end node names should be used: /model.22/cv2.0/cv2.0.2/Conv /model.22/cv3.0/cv3.0.2/Conv /model.22/cv2.1/cv2.1.2/Conv /model.22/cv3.1/cv3.1.2/Conv /model.22/cv2.2/cv2.2.2/Conv /model.22/cv3.2/cv3.2.2/Conv.
+2024-10-15 01:29:22,150 - INFO - parser.py:373 - Start nodes mapped from original model: 'images': 'mark8_opset17/input_layer1'.
+2024-10-15 01:29:22,150 - INFO - parser.py:374 - End nodes mapped from original model: '/model.22/cv2.0/cv2.0.2/Conv', '/model.22/cv3.0/cv3.0.2/Conv', '/model.22/cv2.1/cv2.1.2/Conv', '/model.22/cv3.1/cv3.1.2/Conv', '/model.22/cv2.2/cv2.2.2/Conv', '/model.22/cv3.2/cv3.2.2/Conv'.
+2024-10-15 01:29:22,190 - INFO - parser.py:288 - Translation completed on ONNX model mark8_opset17 (completion time: 00:00:01.28)
+2024-10-15 01:29:22,845 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/road_mark/mark8_opset17.har
+2024-10-15 01:30:40,339 - INFO - client_runner.py:479 - Loading model script commands to mark8_opset17 from string
+2024-10-15 01:30:40,459 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv41 was detected as reg_layer.
+2024-10-15 01:30:40,459 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv52 was detected as reg_layer.
+2024-10-15 01:30:40,459 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv62 was detected as reg_layer.
+2024-10-15 01:30:40,459 - INFO - nms_postprocess_command.py:496 - Using the default score threshold of 0.2 (range is [0-1], where 1 performs maximum suppression) and IoU threshold of 0.4 (range is [0-1], where 0 performs maximum suppression).
+Changing the values is possible using the nms_postprocess model script command.
+2024-10-16 00:26:11,982 - INFO - client_runner.py:479 - Loading model script commands to mark8_opset17 from string
+2024-10-16 00:26:12,105 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv41 was detected as reg_layer.
+2024-10-16 00:26:12,105 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv52 was detected as reg_layer.
+2024-10-16 00:26:12,105 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv62 was detected as reg_layer.
+2024-10-16 00:26:12,105 - INFO - nms_postprocess_command.py:496 - Using the default score threshold of 0.2 (range is [0-1], where 1 performs maximum suppression) and IoU threshold of 0.4 (range is [0-1], where 0 performs maximum suppression).
+Changing the values is possible using the nms_postprocess model script command.
+2024-10-16 00:31:22,804 - INFO - client_runner.py:479 - Loading model script commands to mark8_opset17 from string
+2024-10-16 00:31:22,923 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv41 was detected as reg_layer.
+2024-10-16 00:31:22,923 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv42 was detected as cls_layer.
+2024-10-16 00:31:22,924 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv52 was detected as reg_layer.
+2024-10-16 00:31:22,924 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv53 was detected as cls_layer.
+2024-10-16 00:31:22,924 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv62 was detected as reg_layer.
+2024-10-16 00:31:22,924 - INFO - nms_postprocess_command.py:702 - The layer mark8_opset17/conv63 was detected as cls_layer.
+2024-10-16 00:31:22,924 - INFO - nms_postprocess_command.py:496 - Using the default score threshold of 0.2 (range is [0-1], where 1 performs maximum suppression) and IoU threshold of 0.4 (range is [0-1], where 0 performs maximum suppression).
+Changing the values is possible using the nms_postprocess model script command.
+2024-10-16 00:31:22,925 - INFO - nms_postprocess.py:1079 - The activation function of layer mark8_opset17/conv42 was replaced by a Sigmoid
+2024-10-16 00:31:22,926 - INFO - nms_postprocess.py:1079 - The activation function of layer mark8_opset17/conv53 was replaced by a Sigmoid
+2024-10-16 00:31:22,926 - INFO - nms_postprocess.py:1079 - The activation function of layer mark8_opset17/conv63 was replaced by a Sigmoid
+2024-10-16 00:31:23,165 - IMPORTANT - sdk_backend.py:1009 - Starting Model Optimization
+2024-10-16 00:35:29,497 - IMPORTANT - sdk_backend.py:1050 - Model Optimization is done
+2024-10-16 00:35:30,115 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/road_mark/mark8_opset17_quantized.har
+2024-10-16 00:38:01,760 - INFO - hailo_tools_runner.py:507 - To achieve optimal performance, set the compiler_optimization_level to "max" by adding performance_param(compiler_optimization_level=max) to the model script. Note that this may increase compilation time.

@@ -1,0 +1,58 @@
+2024-10-17 00:55:13,214 - INFO - parser.py:158 - Translation started on ONNX model lane
+2024-10-17 00:55:13,252 - INFO - parser.py:193 - Restored ONNX model lane (completion time: 00:00:00.04)
+2024-10-17 00:55:13,440 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.23)
+2024-10-17 00:55:13,570 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model.cc:147 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&, const onnxruntime::ModelOptions&) Unsupported model IR version: 9, max supported IR version: 8
+
+2024-10-17 00:55:13,734 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-17 01:01:14,042 - INFO - parser.py:158 - Translation started on ONNX model lane_opset17
+2024-10-17 01:01:14,079 - INFO - parser.py:193 - Restored ONNX model lane_opset17 (completion time: 00:00:00.04)
+2024-10-17 01:01:14,263 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.22)
+2024-10-17 01:01:14,401 - WARNING - parser.py:314 - ONNX shape inference failed: [ONNXRuntimeError] : 2 : INVALID_ARGUMENT : Failed to load model with error: /onnxruntime_src/onnxruntime/core/graph/model.cc:147 onnxruntime::Model::Model(onnx::ModelProto&&, const PathString&, const IOnnxRuntimeOpSchemaRegistryList*, const onnxruntime::logging::Logger&, const onnxruntime::ModelOptions&) Unsupported model IR version: 9, max supported IR version: 8
+
+2024-10-17 01:01:14,561 - INFO - parser.py:257 - Unable to simplify the model: '/model.2/Split_output_0'
+2024-10-17 01:02:44,982 - INFO - parser.py:158 - Translation started on ONNX model lane8_opset17
+2024-10-17 01:02:45,018 - INFO - parser.py:193 - Restored ONNX model lane8_opset17 (completion time: 00:00:00.04)
+2024-10-17 01:02:45,202 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.22)
+2024-10-17 01:02:45,666 - INFO - parser.py:373 - Start nodes mapped from original model: 'images': 'lane8_opset17/input_layer1'.
+2024-10-17 01:02:45,666 - INFO - parser.py:374 - End nodes mapped from original model: '/model.22/cv4.0/cv4.0.2/Conv', '/model.22/cv4.1/cv4.1.2/Conv', '/model.22/cv4.2/cv4.2.2/Conv', '/model.22/cv2.0/cv2.0.2/Conv', '/model.22/cv3.0/cv3.0.2/Conv', '/model.22/cv2.1/cv2.1.2/Conv', '/model.22/cv3.1/cv3.1.2/Conv', '/model.22/cv2.2/cv2.2.2/Conv', '/model.22/cv3.2/cv3.2.2/Conv'.
+2024-10-17 01:02:45,711 - INFO - parser.py:288 - Translation completed on ONNX model lane8_opset17 (completion time: 00:00:00.73)
+2024-10-17 01:02:46,239 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/lane_segmentation/lane8_opset17.har
+2024-10-17 23:37:14,724 - INFO - client_runner.py:479 - Loading model script commands to lane8_opset17 from string
+2024-10-17 23:42:17,433 - INFO - main.py:34 - Current Time: 23:42:17, 10/17/24
+2024-10-17 23:42:18,442 - INFO - main.py:46 - CPU: Architecture: x86_64, Model: AMD Ryzen 7 7800X3D 8-Core Processor, Number Of Cores: 16, Utilization: 0.4%
+2024-10-17 23:42:18,442 - INFO - main.py:50 - Memory: Total: 30GB, Available: 26GB
+2024-10-17 23:42:18,442 - INFO - main.py:54 - System info: OS: Linux, Kernel: 6.8.0-45-generic
+2024-10-17 23:42:18,442 - INFO - main.py:55 - Hailo DFC Version: 3.29.0
+2024-10-17 23:42:18,458 - INFO - main.py:60 - HailoRT Version: Not Installed
+2024-10-17 23:42:18,468 - INFO - main.py:76 - PCIe: No Hailo PCIe device was found
+2024-10-17 23:42:18,468 - INFO - main.py:109 - Running `hailo dfc-studio`
+2024-10-17 23:42:18,472 - INFO - dfc_studio.py:22 - Checking requirements
+2024-10-17 23:42:18,472 - ERROR - dfc_studio.py:57 - Node.js is not installed.
+2024-10-18 00:05:30,870 - INFO - client_runner.py:479 - Loading model script commands to lane8_opset17 from string
+2024-10-18 00:05:31,259 - IMPORTANT - sdk_backend.py:1009 - Starting Model Optimization
+2024-10-18 00:09:25,156 - IMPORTANT - sdk_backend.py:1050 - Model Optimization is done
+2024-10-18 00:09:25,548 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/lane_segmentation/lane8_opset17_quantized.har
+2024-10-18 00:16:53,488 - INFO - hailo_tools_runner.py:507 - To achieve optimal performance, set the compiler_optimization_level to "max" by adding performance_param(compiler_optimization_level=max) to the model script. Note that this may increase compilation time.
+2024-10-19 18:03:00,819 - INFO - parser.py:158 - Translation started on ONNX model lane8_opset17
+2024-10-19 18:03:43,539 - INFO - parser.py:158 - Translation started on ONNX model lane8_opset17
+2024-10-19 18:03:43,584 - INFO - parser.py:193 - Restored ONNX model lane8_opset17 (completion time: 00:00:00.04)
+2024-10-19 18:03:43,711 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.17)
+2024-10-19 18:03:44,147 - INFO - parser.py:373 - Start nodes mapped from original model: 'images': 'lane8_opset17/input_layer1'.
+2024-10-19 18:03:44,147 - INFO - parser.py:374 - End nodes mapped from original model: '/model.22/cv4.0/cv4.0.2/Conv', '/model.22/cv4.1/cv4.1.2/Conv', '/model.22/cv4.2/cv4.2.2/Conv', '/model.22/cv2.0/cv2.0.2/Conv', '/model.22/cv3.0/cv3.0.2/Conv', '/model.22/cv2.1/cv2.1.2/Conv', '/model.22/cv3.1/cv3.1.2/Conv', '/model.22/cv2.2/cv2.2.2/Conv', '/model.22/cv3.2/cv3.2.2/Conv'.
+2024-10-19 18:03:44,187 - INFO - parser.py:288 - Translation completed on ONNX model lane8_opset17 (completion time: 00:00:00.65)
+2024-10-19 18:03:44,722 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/lane_segmentation/lane8_opset17.har
+2024-10-19 18:03:58,143 - INFO - client_runner.py:479 - Loading model script commands to lane8_opset17 from string
+2024-10-19 18:03:58,541 - IMPORTANT - sdk_backend.py:1009 - Starting Model Optimization
+2024-10-19 18:11:28,420 - INFO - parser.py:158 - Translation started on ONNX model lane8_opset17
+2024-10-19 18:12:35,024 - INFO - parser.py:158 - Translation started on ONNX model lane8_opset17
+2024-10-19 18:12:35,063 - INFO - parser.py:193 - Restored ONNX model lane8_opset17 (completion time: 00:00:00.04)
+2024-10-19 18:12:35,190 - INFO - parser.py:216 - Extracted ONNXRuntime meta-data for Hailo model (completion time: 00:00:00.17)
+2024-10-19 18:12:35,655 - INFO - parser.py:373 - Start nodes mapped from original model: 'images': 'lane8_opset17/input_layer1'.
+2024-10-19 18:12:35,655 - INFO - parser.py:374 - End nodes mapped from original model: '/model.22/cv4.0/cv4.0.2/Conv', '/model.22/cv4.1/cv4.1.2/Conv', '/model.22/cv4.2/cv4.2.2/Conv', '/model.22/cv2.0/cv2.0.2/Conv', '/model.22/cv3.0/cv3.0.2/Conv', '/model.22/cv2.1/cv2.1.2/Conv', '/model.22/cv3.1/cv3.1.2/Conv', '/model.22/cv2.2/cv2.2.2/Conv', '/model.22/cv3.2/cv3.2.2/Conv', '/model.22/proto/cv3/conv/Conv'.
+2024-10-19 18:12:35,697 - INFO - parser.py:288 - Translation completed on ONNX model lane8_opset17 (completion time: 00:00:00.67)
+2024-10-19 18:12:36,237 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/lane_segmentation/lane8_opset17.har
+2024-10-19 18:13:01,297 - INFO - client_runner.py:479 - Loading model script commands to lane8_opset17 from string
+2024-10-19 18:13:01,704 - IMPORTANT - sdk_backend.py:1009 - Starting Model Optimization
+2024-10-19 18:17:13,311 - IMPORTANT - sdk_backend.py:1050 - Model Optimization is done
+2024-10-19 18:17:13,732 - INFO - client_runner.py:1831 - Saved HAR to: /home/hyundo/2024ESWContest_mobility_TRAVI/convert_weight/lane_segmentation/lane8_opset17_quantized.har
+2024-10-19 18:21:48,408 - INFO - hailo_tools_runner.py:507 - To achieve optimal performance, set the compiler_optimization_level to "max" by adding performance_param(compiler_optimization_level=max) to the model script. Note that this may increase compilation time.
