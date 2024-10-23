@@ -14,3 +14,4 @@ convert_weight/road_mark/calib_dataset.npy
 convert_weight/road_mark/mark8_opset17_quantized.har
 light/hailo8l_detection/resources/videoplayback.mp4
 convert_weight/lane_segmentation/calib_dataset.npy
+traffic_light/hailo8l_detection/resources/videoplayback.mp4 
