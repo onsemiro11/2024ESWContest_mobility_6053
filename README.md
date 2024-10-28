@@ -107,5 +107,8 @@
 ## 시스템 구성도
 ![Screenshot from 2024-10-28 12-43-22](https://github.com/user-attachments/assets/ada5a764-c178-4de2-b81b-0c9cb25d0598)
 
+## SW 흐름도
+![Screenshot from 2024-10-28 12-48-06](https://github.com/user-attachments/assets/bfe40c47-dd1a-4b8f-83dd-1d35d55cc0a0)
+
 ## 시연 영상 링크
 https://youtu.be/9DhYVkQZaqg
