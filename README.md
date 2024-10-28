@@ -19,14 +19,11 @@
 └─travi_ui
 │  CMakeLists.txt
 │  package.xml
-
 ├─include
 │
-
 ├─media
 │  └─img
 └─src
-
 │     beep.mp3
 │     TRAVI_ui.cpp
 
@@ -77,18 +74,12 @@
 │  │  │  requirements.txt
 │  │  │  run_detection.sh
 │  │  │  setup_env.sh
-│  │  │
-
 │  │  └─resources
-
 │  └─ros2_docker
 │      │  Dockerfile
 │      │  tcp_server.py
-│      │
-
 │      └─src
 │          └─my_ros2_package
-
 │              └─scripts
 │                  │  camera_image_publisher2.py
 
@@ -99,27 +90,22 @@
 │  │  │  requirements.txt
 │  │  │  run_detection.sh
 │  │  │  setup_env.sh
-│  │  │
-
 │  │  └─resources
-
 │  └─ros2_docker
 │      │  Dockerfile
 │      │  tcp_server.py
 │      │
-
 │      └─src
 │          └─my_ros2_package
-
 │              └─scripts
 │                      camera_image_publisher2.py
 ```
 ## AI 모델 설명
+![Screenshot from 2024-10-28 12-44-09](https://github.com/user-attachments/assets/d1e3d2cb-a5d7-4905-b46e-fb15864427e1)
 
 
 ## 시스템 구성도
-
-
-## 시연 사진
+![Screenshot from 2024-10-28 12-43-22](https://github.com/user-attachments/assets/ada5a764-c178-4de2-b81b-0c9cb25d0598)
 
 ## 시연 영상 링크
+https://youtu.be/9DhYVkQZaqg
