@@ -1,7 +1,7 @@
 # 2024ESWContest_mobility_TRAVI
 
 ## 작품명
-최전방 차량으로 신호 대기 시에 신호 변경 알림 시스템 개발​
+### 최전방 차량으로 신호 대기 시에 신호 변경 알림 시스템 개발​
 
 ## 작품 설명
 ![project_overview](https://github.com/user-attachments/assets/7b191eea-1220-42e4-9ae8-e456e6370367)
