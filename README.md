@@ -1,6 +1,7 @@
 # 2024ESWContest_mobility_TRAVI
 
 ## 작품 설명
+![project_overview](https://github.com/user-attachments/assets/7b191eea-1220-42e4-9ae8-e456e6370367)
 
 
 
