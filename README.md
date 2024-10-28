@@ -11,8 +11,8 @@
 - 각 PC의 결과 메시지는 모두 TCP 및 ROS를 활용하고 AI모델은 Hailo 칩으로 Inference
 
 ## 디렉토리 구조
+```
 ├─astrayolo_ws
-
 │  └─src
 │      ├─OrbbecSDK_ROS2
 
@@ -113,7 +113,7 @@
 
 │              └─scripts
 │                      camera_image_publisher2.py
-
+```
 ## AI 모델 설명
 
 
